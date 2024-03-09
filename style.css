@@ -1,0 +1,147 @@
+:root {
+  background-color: black;
+  color: white;
+  font-family: Arial;
+  height: 100%; /* Assure une hauteur de 100% pour que le conteneur parent ait une taille définie */
+  margin: 0; /* Utilisation de flexbox pour centrer les éléments */
+  align-items: center;
+}
+.title {
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 0;
+}
+h2 {
+  font-weight: normal;
+  font-size: 20px;
+  margin-left: 100px;
+}
+.app {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 150px;
+}
+.generator {
+  width: 600px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.result {
+  height: 36px;
+  width: 400px;
+  border-color: white;
+  color: white;
+  background-color: rgb(28, 28, 28);
+  border: solid;
+  border-radius: 10px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  font-size: larger;
+}
+.result:focus {
+  outline: none;
+  border-width: 2px;
+}
+
+.generate-button {
+  height: 36px;
+  width: 150px;
+  background-color: transparent;
+  color: white;
+  border: solid;
+  border-color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 1s;
+  display: block;
+}
+.generate-button:hover {
+  background-color: white;
+  color: black;
+  border: none;
+}
+.generate-button:active {
+  opacity: 0.5;
+}
+.settings {
+  height: 400px;
+  width: 350px;
+  align-items: center;
+}
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 90%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: rgb(28, 28, 28); /* Grey background */
+  outline: none; /* Remove outline */
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 20px; /* Set a specific slider handle width */
+  height: 20px; /* Slider handle height */
+  background: white;
+  border-radius: 10px; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+.slider-value {
+  font-size: large;
+  margin-left: 50px;
+  display: block;
+}
+.settings-description {
+  display: inline-block;
+}
+.checkbox {
+  height: 26px;
+  width: 26px;
+  display: inline-block;
+  margin-left: 50px;
+}
+.number-settings,
+.special-char-settings,
+.uppercase-settings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.number-settings {
+  margin-top: 50px;
+}
+@media (max-width: 480px) {
+  .generator {
+    height: 200px;
+  }
+  .result {
+    width: 300px;
+  }
+  .generate-button {
+    width: 100px;
+  }
+  .slider {
+    width: 50%;
+    margin-left: 80px;
+  }
+  .number-settings,
+  .special-char-settings,
+  .uppercase-settings {
+    justify-content: space-around;
+  }
+}

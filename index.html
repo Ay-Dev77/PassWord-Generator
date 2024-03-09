@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Password Generator</h1>
+    </header>
+    <section class="app">
+      <div class="generator">
+        <input class="result" readonly />
+        <button class="generate-button">Générer</button>
+      </div>
+      <div class="settings">
+        <div class="slider-container">
+          <input
+            type="range"
+            min="5"
+            max="50"
+            value="20"
+            class="slider"
+            id="myRange"
+          />
+          <span class="slider-value" id="slider-value">20</span>
+        </div>
+        <div class="settings-container">
+          <div class="number-settings">
+            <input id="nbr-checkbox" class="checkbox" type="checkbox" />
+            <p class="setting-description">Number</p>
+          </div>
+          <div class="special-char-settings">
+            <input id="sp-char-chackbox" class="checkbox" type="checkbox" />
+            <p class="setting-description">Symbols</p>
+          </div>
+          <div class="uppercase-settings">
+            <input id="uprc-checkbox" class="checkbox" type="checkbox" />
+            <p class="setting-description">Uppercase</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <h2>Created by Ay-Deb</h2>
+    </footer>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
